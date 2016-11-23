@@ -1,1 +1,1 @@
-# Implementation of Binary Search Trees with added functionality of pretty priniting keys.
+# Implementation of Binary Search Trees in Java with added functionality of pretty printing keys.
