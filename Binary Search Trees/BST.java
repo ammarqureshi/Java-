@@ -2,8 +2,6 @@
  *  Binary Search Tree class.
  *  Adapted from Sedgewick and Wayne.
  *
- *  @version 3.0 1/11/15 16:49:42
- *
  *  @author Ammar Qureshi
  *
  *************************************************************************/
@@ -48,6 +46,7 @@ public class BST<Key extends Comparable<Key>, Value> {
 	 *  @param key the search key
 	 *  @return true if key is found and false otherwise
 	 */
+
 
 
 
@@ -142,7 +141,6 @@ public class BST<Key extends Comparable<Key>, Value> {
 
 		return select(node,medianKey);
 	}
-
 
 
 	private Node select(Node node, int n){
@@ -330,10 +328,6 @@ public class BST<Key extends Comparable<Key>, Value> {
 	}
 
 
-	//
-	//	public Key max() {
-	//		return max(root).key;
-	//	} 
 
 	private Node max(Node x) {
 		if (x.right == null) 
@@ -342,6 +336,8 @@ public class BST<Key extends Comparable<Key>, Value> {
 		else                 
 			return max(x.right); 
 	} 
+
+
 
 
 
@@ -357,6 +353,42 @@ public class BST<Key extends Comparable<Key>, Value> {
 
 
 
+
+
+		public static void main(String[] args){
+			BST<String,Integer> bst = new BST<String,Integer>();
+	
+			bst.put("S",0);
+			bst.put("E",1);
+			bst.put("X",2);
+			bst.put("A",3);
+			bst.put("R",4);
+			bst.put("H",5);
+			bst.put("M",6);
+			bst.put("X",7);
+			bst.put("C",8);
+
+			bst.put("Y",9);
+			System.out.println(bst.prettyPrintKeys());
+			System.out.println(bst.printKeysInOrder());
+			System.out.println("\n height:" + bst.height());
+			System.out.println("size of root is:" + bst.size(bst.root));
+			System.out.println("size is:" + bst.size());
+			System.out.println("median key is:" + bst.median());
+			bst.delete("E");
+			System.out.println(bst.prettyPrintKeys());
+			bst.printKeysInOrder();
+	
+			System.out.println("\n\n");
+	
+			BST<String,Integer> st = new BST<String,Integer>();
+			st.put("C",0);
+			st.put("L",1);
+			st.put("A",2);
+			st.put("B",3);
+			System.out.println(st.prettyPrintKeys());
+	
+		}
 
 
 }

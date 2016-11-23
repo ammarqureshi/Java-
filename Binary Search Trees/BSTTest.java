@@ -6,11 +6,10 @@ import org.junit.runners.JUnit4;
 
 //-------------------------------------------------------------------------
 /**
- *  Test class for Doubly Linked List
  *
  *  @version 3.1 09/11/15 11:32:15
  *
- *  @author AMMAR QURESHI 14318618
+ *  @author AMMAR QURESHI 
  */
 
 @RunWith(JUnit4.class)
@@ -225,19 +224,9 @@ public class BSTTest
          bst.put("4", 4);   //   2   4
          bst.put("5", 5);   //        \
                             //         5
-    	 
-    	 //in an array [1 2 3 4 5 6 7 8 9]->median in this array is 5
-    	// System.out.println(bst.prettyPrintKeys());
+    	
          assertEquals("return key 5 when size is 9","5",bst.median());
-         
-         
-         
-         
-        //  bst = new BST<String, Integer>();
-         
-         
-
-    	 
+   	 
      }
      
      @Test 
@@ -255,11 +244,6 @@ public class BSTTest
          bst2.put(8, 8);   //      /     \
          bst2.put(7, 7);	 //			   8
      
-        // System.out.println("here");
-        // System.out.println(bst2.prettyPrintKeys());
-        // System.out.println(bst2.printKeysInOrder());
-         
-//         (()7(()8()))
          assertEquals("enter the root again","(()7(()8()))",bst2.printKeysInOrder());
          
     	 
